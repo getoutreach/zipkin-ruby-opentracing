@@ -65,7 +65,7 @@ module Zipkin
           Fields::SPAN_ID => span.context.span_id,
           Fields::PARENT_ID => span.context.parent_id,
           Fields::OPERATION_NAME => span.operation_name,
-          Fields::KIND => OT_KIND_TO_ZIPKIN_KIND[span.tags[:'span.kind'] || 'server'],
+          Fields::KIND => OT_KIND_TO_ZIPKIN_KIND[span.tags['span.kind'] || 'server'],
           Fields::TIMESTAMP => start_ts,
           Fields::DURATION => duration,
           Fields::DEBUG => false,
